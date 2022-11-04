@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        //console.log(window.location.search);
+        
+        const raw = window.location.search;
+        const str = raw.substr(1, raw.length);
+        const params = str.split('&');
+
+        document.write(`Ik heb ${params.length} parameters gevonden.<br>`);    
+
+        const parameter1 = params[0];
+        const parameter2 = params[1];
+        const parameter3 = params[2];
+
+        document.write(`De eerste parameter is ${parameter1}.<br>`);
+        document.write(`De tweede parameter is ${parameter2}.<br>`);
+        document.write(`De derde parameter is ${parameter3}.<br>`);
+
+        const p1      = params[0].split('=');
+        const varname = p1[0];
+        const value   = p1[1];
+
+        document.write(`De variabelnaam is ${varname} en de waarde is ${value}.<br>`);
+        
+    </script>    
+</body>
+</html>
